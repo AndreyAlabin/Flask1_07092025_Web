@@ -85,10 +85,10 @@ def get_author_quotes(author_id:int):
 def get_quote(quotes_id:int):
     if quotes_id:
         quotes_db = db.session.scalars(db.select(QuoteModel).where(QuoteModel.id == quotes_id)).all()
+        if not quotes_db:
+            abort(HTTPStatus.NOT_FOUND, f'Quote with id={quotes_id} not found')
     else:
         quotes_db = db.session.scalars(db.select(QuoteModel)).all()
-    if not quotes_db:
-        abort(HTTPStatus.NOT_FOUND, f'Quote with id={quotes_id} not found')
     return jsonify(iterate(quotes_db)), HTTPStatus.OK
 
 @app.route("/quotes/count")
