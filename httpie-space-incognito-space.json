@@ -25,8 +25,235 @@
         },
         "requests": [
           {
+            "name": "Authors / GET author list",
+            "url": "{{HOST}}/authors",
+            "method": "GET",
+            "headers": [],
+            "queryParams": [],
+            "pathParams": [],
+            "auth": {
+              "type": "inherited"
+            },
+            "body": {
+              "type": "none",
+              "file": {
+                "name": ""
+              },
+              "text": {
+                "value": "",
+                "format": "application/json"
+              },
+              "form": {
+                "isMultipart": false,
+                "fields": []
+              },
+              "graphql": {
+                "query": "",
+                "variables": ""
+              }
+            }
+          },
+          {
+            "name": "Authors / GET author by id",
+            "url": "{{HOST}}/authors/1",
+            "method": "GET",
+            "headers": [],
+            "queryParams": [],
+            "pathParams": [],
+            "auth": {
+              "type": "inherited"
+            },
+            "body": {
+              "type": "none",
+              "file": {
+                "name": ""
+              },
+              "text": {
+                "value": "",
+                "format": "application/json"
+              },
+              "form": {
+                "isMultipart": false,
+                "fields": []
+              },
+              "graphql": {
+                "query": "",
+                "variables": ""
+              }
+            }
+          },
+          {
+            "name": "Authors / GET all quotes by author id",
+            "url": "{{HOST}}/authors/5/quotes",
+            "method": "GET",
+            "headers": [],
+            "queryParams": [],
+            "pathParams": [],
+            "auth": {
+              "type": "inherited"
+            },
+            "body": {
+              "type": "none",
+              "file": {
+                "name": ""
+              },
+              "text": {
+                "value": "",
+                "format": "application/json"
+              },
+              "form": {
+                "isMultipart": false,
+                "fields": []
+              },
+              "graphql": {
+                "query": "",
+                "variables": ""
+              }
+            }
+          },
+          {
+            "name": "Authors / Create new author",
+            "url": "{{HOST}}/authors",
+            "method": "POST",
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": "application/json",
+                "enabled": true
+              }
+            ],
+            "queryParams": [],
+            "pathParams": [],
+            "auth": {
+              "type": "inherited"
+            },
+            "body": {
+              "type": "text",
+              "file": {
+                "name": ""
+              },
+              "text": {
+                "value": "{\n  \"surname\":\"Johnson\",\n  \"name\":\"Bill\"\n}",
+                "format": "text/plain"
+              },
+              "form": {
+                "isMultipart": false,
+                "fields": []
+              },
+              "graphql": {
+                "query": "",
+                "variables": ""
+              }
+            }
+          },
+          {
+            "name": "Authors / Create new quote by author id",
+            "url": "{{HOST}}/authors/5/quotes",
+            "method": "POST",
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": "application/json",
+                "enabled": true
+              }
+            ],
+            "queryParams": [],
+            "pathParams": [],
+            "auth": {
+              "type": "inherited"
+            },
+            "body": {
+              "type": "text",
+              "file": {
+                "name": ""
+              },
+              "text": {
+                "value": "{\n    \"text\": \"Present Continuous\",\n    \"rating\": 5\n}",
+                "format": "text/plain"
+              },
+              "form": {
+                "isMultipart": false,
+                "fields": []
+              },
+              "graphql": {
+                "query": "",
+                "variables": ""
+              }
+            }
+          },
+          {
+            "name": "Authors / Update author by id",
+            "url": "{{HOST}}/authors/4",
+            "method": "PUT",
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": "application/json",
+                "enabled": true
+              }
+            ],
+            "queryParams": [],
+            "pathParams": [],
+            "auth": {
+              "type": "inherited"
+            },
+            "body": {
+              "type": "text",
+              "file": {
+                "name": ""
+              },
+              "text": {
+                "value": "{\n  \"name\":\"Автор неизвестен\",\n  \"surname\":\"\"\n}",
+                "format": "text/plain"
+              },
+              "form": {
+                "isMultipart": false,
+                "fields": []
+              },
+              "graphql": {
+                "query": "",
+                "variables": ""
+              }
+            }
+          },
+          {
+            "name": "Authors / Delete author by id",
+            "url": "{{HOST}}/authors/4",
+            "method": "DELETE",
+            "headers": [
+              {
+                "name": "Content-Type",
+                "value": "application/json",
+                "enabled": true
+              }
+            ],
+            "queryParams": [],
+            "pathParams": [],
+            "auth": {
+              "type": "inherited"
+            },
+            "body": {
+              "type": "none",
+              "file": {
+                "name": ""
+              },
+              "text": {
+                "value": "",
+                "format": "application/json"
+              },
+              "form": {
+                "isMultipart": false,
+                "fields": []
+              },
+              "graphql": {
+                "query": "",
+                "variables": ""
+              }
+            }
+          },
+          {
             "name": "Quotes / GET List quotes",
-            "url": "{{HOST}}{{PORT}}/quotes",
+            "url": "{{HOST}}/quotes",
             "method": "GET",
             "headers": [],
             "queryParams": [],
@@ -55,7 +282,7 @@
           },
           {
             "name": "Quotes / GET quote by id",
-            "url": "{{HOST}}{{PORT}}/quotes/1",
+            "url": "{{HOST}}/quotes/11",
             "method": "GET",
             "headers": [],
             "queryParams": [],
@@ -71,70 +298,6 @@
               "text": {
                 "value": "",
                 "format": "application/json"
-              },
-              "form": {
-                "isMultipart": false,
-                "fields": []
-              },
-              "graphql": {
-                "query": "",
-                "variables": ""
-              }
-            }
-          },
-          {
-            "name": "Quotes / GET all quotes by author id",
-            "url": "{{HOST}}{{PORT}}/authors/1/quotes",
-            "method": "GET",
-            "headers": [],
-            "queryParams": [],
-            "pathParams": [],
-            "auth": {
-              "type": "inherited"
-            },
-            "body": {
-              "type": "none",
-              "file": {
-                "name": ""
-              },
-              "text": {
-                "value": "",
-                "format": "application/json"
-              },
-              "form": {
-                "isMultipart": false,
-                "fields": []
-              },
-              "graphql": {
-                "query": "",
-                "variables": ""
-              }
-            }
-          },
-          {
-            "name": "Quotes / Create new quote to author",
-            "url": "http://127.0.0.1:5000/authors/1/quotes",
-            "method": "POST",
-            "headers": [
-              {
-                "name": "Content-Type",
-                "value": "application/json",
-                "enabled": true
-              }
-            ],
-            "queryParams": [],
-            "pathParams": [],
-            "auth": {
-              "type": "inherited"
-            },
-            "body": {
-              "type": "text",
-              "file": {
-                "name": ""
-              },
-              "text": {
-                "value": "{\n    \"text\": \"Язык, который не меняет вашего представления о программировании, недостоин изучения\"\n}",
-                "format": "text/plain"
               },
               "form": {
                 "isMultipart": false,
@@ -148,7 +311,7 @@
           },
           {
             "name": "Quotes / Edit quote by id",
-            "url": "http://127.0.0.1:5000/quotes/1",
+            "url": "{{HOST}}/quotes/10",
             "method": "PUT",
             "headers": [
               {
@@ -168,7 +331,7 @@
                 "name": ""
               },
               "text": {
-                "value": "{\n    \"text\": \"Я изобрел понятие «объектно-ориентированный», и могу заявить, что не имел в виду C++\"\n}",
+                "value": "{\n    \"text\": \"Present Simple\",\n    \"rating\": 5\n}",
                 "format": "text/plain"
               },
               "form": {
@@ -183,7 +346,7 @@
           },
           {
             "name": "Quotes / Delete quote by id",
-            "url": "http://127.0.0.1:5000/quotes/1",
+            "url": "{{HOST}}/quotes/9",
             "method": "DELETE",
             "headers": [],
             "queryParams": [],
@@ -211,8 +374,8 @@
             }
           },
           {
-            "name": "Authors / GET author by id",
-            "url": "http://127.0.0.1:5000/authors/1",
+            "name": "OLD / GET Count quotes",
+            "url": "{{HOST}}/quotes/count",
             "method": "GET",
             "headers": [],
             "queryParams": [],
@@ -240,8 +403,8 @@
             }
           },
           {
-            "name": "Authors / GET author list",
-            "url": "http://127.0.0.1:5000/authors",
+            "name": "OLD / GET Random quote",
+            "url": "{{HOST}}/quotes/random",
             "method": "GET",
             "headers": [],
             "queryParams": [],
@@ -269,86 +432,10 @@
             }
           },
           {
-            "name": "Authors / Author Post",
-            "url": "http://127.0.0.1:5000/authors",
-            "method": "POST",
-            "headers": [
-              {
-                "name": "Content-Type",
-                "value": "application/json",
-                "enabled": true
-              }
-            ],
-            "queryParams": [],
-            "pathParams": [],
-            "auth": {
-              "type": "inherited"
-            },
-            "body": {
-              "type": "text",
-              "file": {
-                "name": ""
-              },
-              "text": {
-                "value": "{\n    \"name\":\"Alan\", \n    \"surname\": \"Perlis\"\n}",
-                "format": "text/plain"
-              },
-              "form": {
-                "isMultipart": false,
-                "fields": []
-              },
-              "graphql": {
-                "query": "",
-                "variables": ""
-              }
-            }
-          },
-          {
-            "name": "Authors / Author update by id",
-            "url": "http://127.0.0.1:5000/authors/1",
-            "method": "PUT",
-            "headers": [
-              {
-                "name": "Content-Type",
-                "value": "application/json",
-                "enabled": true
-              }
-            ],
-            "queryParams": [],
-            "pathParams": [],
-            "auth": {
-              "type": "inherited"
-            },
-            "body": {
-              "type": "text",
-              "file": {
-                "name": ""
-              },
-              "text": {
-                "value": "{\n    \"name\":\"Ivan\"\n}",
-                "format": "text/plain"
-              },
-              "form": {
-                "isMultipart": false,
-                "fields": []
-              },
-              "graphql": {
-                "query": "",
-                "variables": ""
-              }
-            }
-          },
-          {
-            "name": "Authors / Delete author by id",
-            "url": "http://127.0.0.1:5000/authors/1",
-            "method": "DELETE",
-            "headers": [
-              {
-                "name": "Content-Type",
-                "value": "application/json",
-                "enabled": true
-              }
-            ],
+            "name": "OLD / GET Filter quotes",
+            "url": "{{HOST}}/quotes/filter?rating=5&name=Bill",
+            "method": "GET",
+            "headers": [],
             "queryParams": [],
             "pathParams": [],
             "auth": {
@@ -385,12 +472,12 @@
         "variables": [
           {
             "name": "HOST",
-            "value": "http://127.0.0.1",
+            "value": "https://andrey1980.pythonanywhere.com",
             "isSecret": false
           },
           {
             "name": "PORT",
-            "value": ":5000",
+            "value": "",
             "isSecret": false
           }
         ]

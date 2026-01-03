@@ -8,7 +8,6 @@ __pycache__/
 *.env
 *env/
 db.*
-*.db
 *.sqlite
 *.sqlite3
 *.tmp
